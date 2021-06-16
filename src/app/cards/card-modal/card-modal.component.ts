@@ -47,6 +47,8 @@ export class CardModalComponent implements OnInit {
   updateCard(): void {
     this.cardService.updateCard(this.cardForm.value, this.data.id)
     .subscribe((res:any)=> {
+      console.log(res);
+      
       this._snackBar.open(res || 'Kartvizit başarıyla düzenlendi.', '', {
         duration: 4000,
       });
